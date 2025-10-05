@@ -30,10 +30,12 @@ public class PauseManager : MonoBehaviour
         if (isPaused)
         {
             Resume();
+            Debug.Log("Resume");
         }
         else
         {
             Pause();
+            Debug.Log("Pause");
         }
     }
 
@@ -47,7 +49,7 @@ public class PauseManager : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f; // Met le temps en pause
+        Time.timeScale = 0f;
         isPaused = true;
     }
 
