@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +25,8 @@ public class PauseManager : MonoBehaviour
             TogglePause();
         }
     }
-
+    
+    
     public void TogglePause()
     {
         if (isPaused)
