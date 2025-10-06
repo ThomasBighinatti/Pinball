@@ -3,7 +3,7 @@ using UnityEngine;
 public class BumperNormal : MonoBehaviour
 {
     public float strength = 1;
-    
+    [SerializeField] private int score = 10;
     void OnCollisionEnter(Collision other)
     {
         Vector3 ballDirection = other.relativeVelocity;
@@ -15,5 +15,7 @@ public class BumperNormal : MonoBehaviour
         
         
         other.rigidbody.AddForce(direction * strength);
+        
+        ScoreManager.instance.AddScore(score);
     }
 }

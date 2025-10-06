@@ -1,12 +1,13 @@
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public Button pauseButton;
-
+    [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
     private bool isPaused = false;
 
     void Start()
@@ -20,7 +21,7 @@ public class PauseManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(pauseKey))
         {
             TogglePause();
         }
@@ -59,5 +60,12 @@ public class PauseManager : MonoBehaviour
     {
         Debug.Log("Le jeu se ferme");
         Application.Quit();
+    }
+
+    public void ReloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        Resume();
     }
 }

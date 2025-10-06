@@ -4,6 +4,7 @@ using UnityEngine;
 public class Bumper : MonoBehaviour
 {
     [SerializeField] float strength = 10f;
+    [SerializeField] private int score = 10;
     void OnCollisionEnter(Collision other)
     {
         //Debug.Log(transform.position);
@@ -14,6 +15,8 @@ public class Bumper : MonoBehaviour
         direction = direction.normalized;
         
         other.rigidbody.AddForce(direction*strength);
+        
+        ScoreManager.instance.AddScore(score);
 
     }
 }
