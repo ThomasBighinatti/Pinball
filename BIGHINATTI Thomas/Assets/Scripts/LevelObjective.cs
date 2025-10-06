@@ -1,13 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelObjective : MonoBehaviour
 {
+    [SerializeField] public GameManager GameManager;
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("caca");
+            GameManager.GoNextLevel();
         }
     }
 

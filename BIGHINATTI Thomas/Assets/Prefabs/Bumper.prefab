@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5922005322733814107}
   - component: {fileID: 562876006672412406}
   - component: {fileID: 4993251464553646443}
+  - component: {fileID: 3309146678143391475}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Untagged
@@ -124,3 +125,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength: 300
+  score: 10
+  anim: {fileID: 0}
+--- !u!111 &3309146678143391475
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8249371274542987580}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 73a13517326561f41a7eb266b98ff31c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 73a13517326561f41a7eb266b98ff31c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
