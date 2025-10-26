@@ -22,6 +22,5 @@ public class EventController : MonoBehaviour
         onTriggerEnterEvent.Invoke();
 
     }
-
-
+    
 }
